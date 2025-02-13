@@ -1,0 +1,18 @@
+[package]
+name = "dbsdk-vu-asm"
+version = "0.1.0"
+edition = "2021"
+authors = ["Hazel Stagner"]
+description = "Proc macro support for assembling in-line VU programs for the Dreambox fantasy console"
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/GlaireDaggers/DBSDK-VU-ASM"
+keywords = ["gamedev", "fantasy-console"]
+categories = ["game-development"]
+
+[lib]
+proc-macro = true
+
+[dependencies]
+quote = "1.0.38"
+syn = "2.0.98"
