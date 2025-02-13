@@ -1,7 +1,7 @@
 # Vertex Unit
 The "Vertex Unit" (VU) is responsible for processing vertex data in Dreambox. VU programs may be up to 64 instructions long, and feature a compact instruction set with no branching.
 
-All inputs, registers, and outputs are 128-bit floating point vectors ("vec4").
+All inputs, registers, and outputs are 128-bits wide, storing a 4-component floating point vector at 32 bits per component ("vec4").
 
 ## VU inputs, registers, & outputs
 The user may supply up to 8 "vertex input" slots, each of which can be configured with an offset & format which defines how to load & convert the source data into the given vec4 input slot.
