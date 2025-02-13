@@ -18,57 +18,57 @@ There are 16 vec4 "constant" slots available, which can be written to by the use
 
 ## VU opcodes
 - ld (dst reg) (input slot)
-    Load a value from the given input slot number into the given register
+  - Load a value from the given input slot number into the given register
 - ldc (dst reg) (input slot)
-    Load a value from the given constant slot number into the given register
+  - Load a value from the given constant slot number into the given register
 - st (dst output) (src register)
-    Store the source register into the given output slot
+  - Store the source register into the given output slot
 - add (dst reg) (src reg)
-    `dst = dst + src`
+  - `dst = dst + src`
 - sub (dst reg) (src reg)
-    `dst = dst - src`
+  - `dst = dst - src`
 - mul (dst reg) (src reg)
-    `dst = dst * src`
+  - `dst = dst * src`
 - div (dst reg) (src reg)
-    `dst = dst / src`
+  - `dst = dst / src`
 - dot (dst reg) (src reg)
-    `dst = [dot(dst, src), 0, 0, 0]`
+  - `dst = [dot(dst, src), 0, 0, 0]`
 - abs (dst reg) (src reg)
-    `dst = abs(src)`
+  - `dst = abs(src)`
 - sign (dst reg) (src reg)
-    `dst = sign(src)`
+  - `dst = sign(src)`
 - sqrt (dst reg) (src reg)
-    `dst = sqrt(src)`
+  - `dst = sqrt(src)`
 - pow (dst reg) (src reg)
-    `dst = pow(dst, src)`
+  - `dst = pow(dst, src)`
 - exp (dst reg) (src reg)
-    `dst = exp(src)`
+  - `dst = exp(src)`
 - log (dst reg) (src reg)
-    `dst = log(src)`
+  - `dst = log(src)`
 - min (dst reg) (src reg)
-    `dst = min(dst, src)`
+  - `dst = min(dst, src)`
 - max (dst reg) (src reg)
-    `dst = max(dst, src)`
+  - `dst = max(dst, src)`
 - sin (dst reg) (src reg)
-    `dst = sin(src)`
+  - `dst = sin(src)`
 - cos (dst reg) (src reg)
-    `dst = cos(src)`
+  - `dst = cos(src)`
 - tan (dst reg) (src reg)
-    `dst = tan(src)`
+  - `dst = tan(src)`
 - asin (dst reg) (src reg)
-    `dst = asin(src)`
+  - `dst = asin(src)`
 - acos (dst reg) (src reg)
-    `dst = acos(src)`
+  - `dst = acos(src)`
 - atan (dst reg) (src reg)
-    `dst = atan(src)`
+  - `dst = atan(src)`
 - atan2 (dst reg) (src reg)
-    `dst = atan2(dst, src)`
+  - `dst = atan2(dst, src)`
 - shf (dst reg) (src reg) (swizzle) (mask)
-    Shuffles the elements of the source register into the destination register, with a 4-bit mask value to indicate which destination registers to change. Example: `shf r0 r1 xyzw 0b0011` would copy the x and y elements of r1 into r0, while leaving z and w unchanged.
+  - Shuffles the elements of the source register into the destination register, with a 4-bit mask value to indicate which destination registers to change. Example: `shf r0 r1 xyzw 0b0011` would copy the x and y elements of r1 into r0, while leaving z and w unchanged.
 - mulm (dst reg) (src reg)
-    Transforms dst register with a 4x4 column-major matrix encoded in four sequential registers starting at src (for example, given "r1" as the source operand, the matrix columns are expected to be stored in r1, r2, r3, and r4)
+  - Transforms dst register with a 4x4 column-major matrix encoded in four sequential registers starting at src (for example, given "r1" as the source operand, the matrix columns are expected to be stored in r1, r2, r3, and r4)
 - end
-    Terminates execution of the VU program
+  - Terminates execution of the VU program
 
 ## Example VU program
 ```
